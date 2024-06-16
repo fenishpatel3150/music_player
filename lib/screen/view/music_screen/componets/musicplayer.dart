@@ -60,22 +60,22 @@ class MusicPlayer extends StatelessWidget {
             children: [
               Icon(
                 Icons.favorite_border,
-                color: Color(0xff272727),
+                color: Colors.grey,
                 size: 30,
               ),
               Icon(
                 Icons.playlist_add,
-                color: Color(0xff272727),
+                color: Colors.grey,
                 size: 30,
               ),
               Icon(
                 Icons.equalizer_sharp,
-                color: Color(0xff272727),
+                color: Colors.grey,
                 size: 30,
               ),
               Icon(
                 Icons.alarm,
-                color: Color(0xff272727),
+                color: Colors.grey,
                 size: 30,
               ),
             ],
@@ -84,9 +84,12 @@ class MusicPlayer extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text(
-              '00:00',
-              style: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                '02:20',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 35, bottom: 35),
@@ -101,14 +104,18 @@ class MusicPlayer extends StatelessWidget {
                   onChanged: (value) {
                    if(playTrue.maxDuration>0)
                      {
+
                      }
                   },
                 ),
               ),
             ),
-            Text(
-              '00:00',
-              style: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: Text(
+                '00:00',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
@@ -138,7 +145,7 @@ class MusicPlayer extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
-                  (playFalse.isplayingsong) ? Icons.pause : Icons.play_arrow,
+                  (playFalse.isplayingsong) ? Icons.play_arrow : Icons.play_arrow,
                   color: Colors.white,
                 ),
               ),

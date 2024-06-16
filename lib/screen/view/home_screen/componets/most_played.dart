@@ -83,7 +83,7 @@ Widget MostPlayed1(BuildContext context) {
                           Padding(
                             padding: const EdgeInsets.all(5),
                             child: Text(
-                              mostplayed2[index]['name'],
+                              mostplayed1[index]['name'],
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w400),

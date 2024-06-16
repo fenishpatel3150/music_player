@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/screen/provider/play_provider.dart';
+import 'package:music_player/screen/view/SplashScreen/SplashScreen.dart';
 import 'package:music_player/screen/view/home_screen/Home_Screen.dart';
 import 'package:music_player/screen/view/music_screen/music_screen.dart';
 import 'package:music_player/theme/theme_screen.dart';
@@ -22,8 +23,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: themedata(),
+      initialRoute: '/Splash',
       routes: {
-        '/' : (context) => Home_Screen(),
+        '/Splash' : (context) => SplashScreen(),
+        '/home' : (context) => Home_Screen(),
         '/second' : (context) => music_screen(),
       },
 
